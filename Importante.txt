@@ -1,0 +1,29 @@
+*********************************************
+Validar en PowerShell Instalación de .Net
+*********************************************
+
+dotnet --versión
+
+*********************************************
+Extensión VSCode Instalación de .Net
+*********************************************
+
+C# Dev Kit
+
+*********************************************
+Ruta Programas
+*********************************************
+
+-- PowerShell --
+dotnet new console -n FundamentosCSharp
+
+-- Ejecutar Programa desde PowerShell --
+dotnet run
+
+
+-- Ejecutar Programa desde PowerShell Individual --
+dotnet run --file .\Ejercicio1.cs
+
+
+
+
