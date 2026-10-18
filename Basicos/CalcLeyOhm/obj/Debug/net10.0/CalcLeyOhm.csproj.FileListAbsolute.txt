@@ -1,0 +1,15 @@
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\bin\Debug\net10.0\CalcLeyOhm.exe
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\bin\Debug\net10.0\CalcLeyOhm.deps.json
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\bin\Debug\net10.0\CalcLeyOhm.runtimeconfig.json
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\bin\Debug\net10.0\CalcLeyOhm.dll
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\bin\Debug\net10.0\CalcLeyOhm.pdb
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\obj\Debug\net10.0\CalcLeyOhm.GeneratedMSBuildEditorConfig.editorconfig
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\obj\Debug\net10.0\CalcLeyOhm.AssemblyInfoInputs.cache
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\obj\Debug\net10.0\CalcLeyOhm.AssemblyInfo.cs
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\obj\Debug\net10.0\CalcLeyOhm.csproj.CoreCompileInputs.cache
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\obj\Debug\net10.0\CalcLeyOhm.sourcelink.json
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\obj\Debug\net10.0\CalcLeyOhm.dll
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\obj\Debug\net10.0\refint\CalcLeyOhm.dll
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\obj\Debug\net10.0\CalcLeyOhm.pdb
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\obj\Debug\net10.0\CalcLeyOhm.genruntimeconfig.cache
+X:\Test_\Desarrollo\Basicos\CalcLeyOhm\obj\Debug\net10.0\ref\CalcLeyOhm.dll
