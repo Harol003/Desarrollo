@@ -14,15 +14,36 @@ C# Dev Kit
 Ruta Programas
 *********************************************
 
--- PowerShell --
+-- Creacion de Proyecto PowerShell --
 dotnet new console -n FundamentosCSharp
 
 -- Ejecutar Programa desde PowerShell --
 dotnet run
 
-
 -- Ejecutar Programa desde PowerShell Individual --
 dotnet run --file .\Ejercicio1.cs
+
+
+*********************************************
+Ejemplo Calculadora
+*********************************************
+
+dotnet new console -n CalculadoraEducativa
+cd CalculadoraEducativa
+code .
+
+dotnet new console -n CalcLeyOhm
+cd CalcLeyOhm
+code .
+
+**********************************************
+Documentación
+**********************************************
+
+https://learn.microsoft.com/es-es/dotnet/csharp/tour-of-csharp/
+
+Actividad 1  -  https://learn.microsoft.com/es-es/training/modules/csharp-write-first/?source=recommendations
+
 
 
 
