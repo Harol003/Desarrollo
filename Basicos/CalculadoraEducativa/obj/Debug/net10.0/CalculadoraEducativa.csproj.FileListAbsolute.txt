@@ -1,0 +1,15 @@
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\bin\Debug\net10.0\CalculadoraEducativa.exe
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\bin\Debug\net10.0\CalculadoraEducativa.deps.json
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\bin\Debug\net10.0\CalculadoraEducativa.runtimeconfig.json
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\bin\Debug\net10.0\CalculadoraEducativa.dll
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\bin\Debug\net10.0\CalculadoraEducativa.pdb
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\obj\Debug\net10.0\CalculadoraEducativa.GeneratedMSBuildEditorConfig.editorconfig
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\obj\Debug\net10.0\CalculadoraEducativa.AssemblyInfoInputs.cache
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\obj\Debug\net10.0\CalculadoraEducativa.AssemblyInfo.cs
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\obj\Debug\net10.0\CalculadoraEducativa.csproj.CoreCompileInputs.cache
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\obj\Debug\net10.0\CalculadoraEducativa.sourcelink.json
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\obj\Debug\net10.0\CalculadoraEducativa.dll
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\obj\Debug\net10.0\refint\CalculadoraEducativa.dll
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\obj\Debug\net10.0\CalculadoraEducativa.pdb
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\obj\Debug\net10.0\CalculadoraEducativa.genruntimeconfig.cache
+X:\Test_\Desarrollo\Basicos\CalculadoraEducativa\obj\Debug\net10.0\ref\CalculadoraEducativa.dll
