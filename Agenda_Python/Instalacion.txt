@@ -1,0 +1,204 @@
+# AGENDA DE CONTACTOS – CONFIGURACIÓN INICIAL DEL PROYECTO
+
+## 1. Comprobar la instalación de Python
+
+Abrir la terminal de PowerShell en Visual Studio Code y ejecutar:
+
+```powershell
+python --version
+```
+
+Si el comando no funciona, probar:
+
+```powershell
+py --version
+```
+
+## 2. Crear la carpeta del proyecto
+
+La ruta utilizada para el proyecto es:
+
+```text
+X:\Test_\Desarrollo\Agenda_Python
+```
+
+Ingresar a la carpeta desde PowerShell:
+
+```powershell
+cd X:\Test_\Desarrollo\Agenda_Python
+```
+
+## 3. Crear el entorno virtual de Python
+
+El entorno virtual permite instalar las bibliotecas del proyecto de forma aislada, sin afectar otras aplicaciones de Python.
+
+Ejecutar:
+
+```powershell
+python -m venv .venv
+```
+
+## 4. Activar el entorno virtual
+
+En PowerShell, ejecutar:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Si PowerShell bloquea la ejecución del script, habilitar la ejecución únicamente durante la sesión actual:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+```
+
+Después, activar el entorno virtual:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Cuando el entorno esté activo, aparecerá `(.venv)` al comienzo de la línea de comandos.
+
+## 5. Instalar la biblioteca de conexión a SQL Server
+
+Con el entorno virtual activado, actualizar pip:
+
+```powershell
+python -m pip install --upgrade pip
+```
+
+Instalar la biblioteca pyodbc:
+
+```powershell
+python -m pip install pyodbc
+```
+
+Comprobar que quedó instalada:
+
+```powershell
+python -m pip show pyodbc
+```
+
+También se puede verificar mediante:
+
+```powershell
+python -c "import pyodbc; print(pyodbc.version)"
+```
+
+## 6. Comprobar el controlador ODBC de SQL Server
+
+Ejecutar en PowerShell:
+
+```powershell
+Get-OdbcDriver |
+    Where-Object { $_.Name -like "*SQL Server*" } |
+    Format-Table Name, Platform
+```
+
+El proyecto utiliza el controlador:
+
+```text
+ODBC Driver 18 for SQL Server
+```
+
+Si no aparece instalado, descargarlo desde la documentación oficial de Microsoft:
+
+https://learn.microsoft.com/es-es/sql/connect/odbc/download-odbc-driver-for-sql-server
+
+## 7. Comprobar los servicios de SQL Server
+
+Para identificar las instancias de SQL Server instaladas y verificar su estado, ejecutar:
+
+```powershell
+Get-Service |
+    Where-Object { $_.DisplayName -like "*SQL Server*" } |
+    Format-Table Status, Name, DisplayName
+```
+
+En el equipo se identificaron las siguientes instancias: `MSSQLSERVER`, `SQLEXPRESS`, `NEUTA` y `POLI`.
+
+Para este proyecto se comprobó que la instancia predeterminada permite la conexión utilizando `localhost`.
+
+La configuración de conexión en Python es:
+
+```python
+SERVIDOR = r"localhost"
+BASE_DATOS = "AgendaContactos"
+```
+
+La conexión utiliza autenticación de Windows y el controlador ODBC 18 de SQL Server.
+
+
+## 8. Prueba de conexión de Python con SQL Server
+
+Crear un archivo llamado `test.py` dentro de la carpeta del proyecto `Agenda_Python`. Este archivo permitirá comprobar que Python se conecta correctamente al servidor SQL Server y a la base de datos `AgendaContactos`.
+
+**Código de prueba:**
+
+```python
+# ============================================================
+# PRUEBA DE CONEXION PYTHON CON SQL SERVER
+# ============================================================
+
+import pyodbc
+
+# Configuracion de la conexion
+SERVIDOR = r"localhost"
+BASE_DATOS = "AgendaContactos"
+
+# Cadena de conexion con autenticacion de Windows
+CADENA_CONEXION = (
+    "DRIVER={ODBC Driver 18 for SQL Server};"
+    f"SERVER={SERVIDOR};"
+    f"DATABASE={BASE_DATOS};"
+    "Trusted_Connection=yes;"
+    "Encrypt=yes;"
+    "TrustServerCertificate=yes;"
+)
+
+# Intentar establecer la conexion
+try:
+    with pyodbc.connect(CADENA_CONEXION, timeout=5) as conexion:
+        cursor = conexion.cursor()
+
+        # Consultar el servidor y la base de datos
+        cursor.execute("SELECT @@SERVERNAME, DB_NAME()")
+        resultado = cursor.fetchone()
+
+        print("Conexion exitosa.")
+        print("Servidor:", resultado[0])
+        print("Base de datos:", resultado[1])
+
+except pyodbc.Error as error:
+    print("No fue posible conectar con SQL Server.")
+    print("Detalle del error:", error)
+```
+
+**Ejecutar la prueba:**
+
+Con el entorno virtual `(.venv)` activado en la terminal de Visual Studio Code, ejecutar:
+
+```powershell
+python test.py
+```
+
+**Resultado esperado:**
+
+```text
+Conexion exitosa.
+Servidor: DESKTOP-D3D8QCB
+Base de datos: AgendaContactos
+```
+
+Este resultado confirma que Python puede conectarse a SQL Server y acceder a la base de datos especificada.
+
+Si aparece un error, revisar que el servicio de SQL Server esté activo, que el controlador ODBC 18 esté instalado, que el nombre de la base de datos sea correcto y que el usuario de Windows tenga los permisos necesarios.
+
+Una vez verificada la conexión, ejecutar la aplicación principal con:
+
+```powershell
+python Agenda.py
+```
+
+

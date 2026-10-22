@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CalcLeyOhm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c4294165381ee249db002bb05f4b2a7b4a3756d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d1974e84fe284646dc9a713fd016f0a8f0f1505")]
 [assembly: System.Reflection.AssemblyProductAttribute("CalcLeyOhm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CalcLeyOhm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
